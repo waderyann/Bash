@@ -1,0 +1,12 @@
+!#/bin/bash
+echo "Choose a number between 1-10"
+read number
+
+declare -i x=${RANDOM:0:1}
+
+if (($number == x)); then
+echo "Your number matches" $number
+else
+echo "You've guessed the wrong number"
+echo "The right number was" $x "Your number was" $number
+fi
